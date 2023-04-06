@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import AdduserAccount from "./pages/AdduserAccount";
+import CustomizedTables from "./pages/CustomizedTables";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import EditUser from "./pages/EditUser";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<AdduserAccount />} />
+          <Route exact path="/table" element={<CustomizedTables />} />
+          <Route exact path="/edit/:idElement" element={<EditUser />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
