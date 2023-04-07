@@ -33,11 +33,9 @@ const useReducers = (state = initialState, action) => {
     };
   }
   else if (action.type === types.UPDATE_USERS) {
-    console.log(action.payload,"wdwdwd")
     return {
       ...state,
       loading: false,
-      users: action.payload,
     };
   }
   else {

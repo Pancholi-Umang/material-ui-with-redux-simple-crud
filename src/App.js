@@ -4,6 +4,7 @@ import CustomizedTables from "./pages/CustomizedTables";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import EditUser from "./pages/EditUser";
 import "./App.css";
+// json-server --watch db.json --port 5000
 
 const App = () => {
   return (

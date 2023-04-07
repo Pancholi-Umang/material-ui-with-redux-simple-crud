@@ -26,6 +26,7 @@ const EditUser = () => {
  
   useEffect(()=>{
     dispatch(editUsers(idElement))
+    dispatch(loadUsers());
   },[])
 
   useEffect(()=>{
@@ -41,17 +42,9 @@ const EditUser = () => {
   const { firstname, lastname, email, password } = getInput;
 
   const updateUserData= (data) => {
-
-    let updateValue = [];
-    getEditData?.map((val)=>{
-      if(val.id === data.id){
-        updateValue.push(data)
-      }else{
-        updateValue.push(val);
-      }
-    })
-    dispatch(updateUsers(updateValue));
-    // navigate("/")
+    console.log(data)
+    dispatch(updateUsers(data));
+    navigate("/")
   }
 
   return (

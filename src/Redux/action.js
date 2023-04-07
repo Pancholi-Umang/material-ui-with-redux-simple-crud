@@ -52,6 +52,7 @@ export const editUsers = (id) => {
 }
 
 export const updateUsers = (data) => {
+  console.log(data)
   return function (dispatch) {
     axios.put(`http://localhost:5000/user/${data.id}`,data)
     .then(() => {
