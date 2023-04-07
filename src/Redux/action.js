@@ -5,6 +5,7 @@ export const loadUsers = () => {
   return function (dispatch) {
     axios.get(`http://localhost:5000/user`)
     .then((resp) => {
+      console.log(resp.data)
       dispatch({
         type: types.GET_USERS,
         payload: resp.data,

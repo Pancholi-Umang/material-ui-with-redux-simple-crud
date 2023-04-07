@@ -70,7 +70,7 @@ function AdduserAccount() {
           sx={{ width: { xs: 200, md: 300 } }}
           id="filled-Email"
           label="Email"
-          type="email"
+          type="text"
           variant="filled"
           name="email"
           onChange={handleChange}

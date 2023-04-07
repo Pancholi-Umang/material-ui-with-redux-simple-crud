@@ -1,18 +1,3 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "firstname": "umang",
-      "lastname": "pancholi",
-      "email": "umang@gmail.com",
-      "password": "umang12345"
-    },
-    {
-      "firstname": "jayesh",
-      "lastname": "dangodra",
-      "email": "jayG@hm.com",
-      "password": "jayeshchhay",
-      "id": 2
-    }
-  ]
+  "user": []
 }

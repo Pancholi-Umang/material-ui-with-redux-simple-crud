@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -36,17 +36,17 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 export default function CustomizedTables() {
   const dispatch = useDispatch();
-
-
+  const [isToggle, setToggle] = useState(false)
   
   useEffect(() => {
     dispatch(loadUsers());
-  }, []);
+  }, [isToggle]);
 
   const getData = useSelector((state) => state.users.users);
   
   const handledeleteClick = (id) => {
     dispatch(deleteUsers(id));
+    setToggle(true)
   };
 
   const Navigate = useNavigate()
